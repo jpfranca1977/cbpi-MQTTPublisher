@@ -6,7 +6,7 @@ This plugin allows you to send data to an MQTT message broker using a [CraftBeer
 
 ```
 cd craftbeerpi3/modules/plugins/
-git clone https://github.com/jpfranca1977/craftbeerpi-MQTTClient
+git clone https://github.com/jpfranca1977/cbpi-MQTTPublisher.git
 cd craftbeerpi-MQTTClient
 ```
 In case you miss the eclipse paho library. Install the dependencies using:
