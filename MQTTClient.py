@@ -31,8 +31,8 @@ class MQTTClient():
         'keepalive': 60,
 		'credentials':  None,
 ##        'credentials': {                # HTTP-Config   -> defaults to None
-##            'username': 'iot',          #   User
-##            'password': 'Hig500lo@'     #   Password
+##            'username': 'username',          #   User
+##            'password': 'password'     #   Password
 ##        },
         'tls_settings': None
     }
