@@ -26,13 +26,14 @@ constructor. The config dictionary can contain the following options:
 """
 class MQTTClient():
     config = {
-        'host': 'iot.jpfranca.com',
+        'host': 'broker.hivemq.com',
         'port': 1883,
         'keepalive': 60,
-        'credentials': {                # HTTP-Config   -> defaults to None
-            'username': 'iot',          #   User
-            'password': 'Hig500lo@'     #   Password
-        },
+		'credentials':  None,
+##        'credentials': {                # HTTP-Config   -> defaults to None
+##            'username': 'iot',          #   User
+##            'password': 'Hig500lo@'     #   Password
+##        },
         'tls_settings': None
     }
 
