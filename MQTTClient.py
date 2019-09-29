@@ -9,29 +9,29 @@ In order to instantiate the class simply pass a configuration dictionary to the
 constructor. The config dictionary can contain the following options:
 
     {
-        'id': 'yourClientID',			# Client ID	-> defaults to generated UUID
-        'host': 'your-mqtt-host.com',   # URI           -> defaults to 127.0.0.1
-        'port': 8883,                  	# Port          -> defaults to 1883
-        'keepalive': 60,               	# Lifetime      -> defaults to 60s
-        'credentials': {               	# HTTP-Config   -> defaults to None
-            'username': 'foo',    		# User
-            'password': 'bar'          	# Password
+        'id': 'yourClientID',		# Client ID	-> defaults to generated UUID
+        'host': 'your-mqtt-host.com',    # URI           -> defaults to 127.0.0.1
+        'port': 8883,                    # Port          -> defaults to 1883
+        'keepalive': 60,                 # Lifetime      -> defaults to 60s
+        'credentials': {                # HTTP-Config   -> defaults to None
+            'username': 'foo',               #   User
+            'password': 'bar'           #   Password
         },
         'tls_settings': {               # TLS-Config    -> defaults to None
-            'ca_certs': '/etc/ssl/...', # Cert-Dir
-            'tls_version': XXX          # TLS-Version -> defaults TLSv1
+            'ca_certs': '/etc/ssl/...'  #   Cert-Dir
+            'tls_version': XXX          #   TLS-Version -> defaults TLSv1
         }
     }
 
 """
 class MQTTClient():
     config = {
-        'host': 'yourhost.com',     		# replace yourhost.com with your host
-        'port': 1883,						# replace 1883 with MQTT port 
+        'host': 'iot.jpfranca.com',
+        'port': 1883,
         'keepalive': 60,
-        'credentials': {
-            'username': 'yourusername',		# replace yourusername with your username
-            'password': 'yourpassword'		# replace yourpassword with your password 
+        'credentials': {                # HTTP-Config   -> defaults to None
+            'username': 'iot',          #   User
+            'password': 'Hig500lo@'     #   Password
         },
         'tls_settings': None
     }
@@ -41,7 +41,8 @@ class MQTTClient():
             self.config = config
 
         if self.config.get('id') is None:
-           self.config['id'] = uuid.uuid4().hex
+           self.config['id'] = uuid.uuid4().hex 
+           
         self.__mqttc = mqtt.Client(client_id=self.config.get('id'))
         self.__mqttc.on_connect = self.__on_connect
 
