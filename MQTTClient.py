@@ -9,17 +9,17 @@ In order to instantiate the class simply pass a configuration dictionary to the
 constructor. The config dictionary can contain the following options:
 
     {
-        'id': 'yourClientID',		# Client ID	-> defaults to generated UUID
-        'host': 'your-mqtt-host.com'    # URI           -> defaults to 127.0.0.1
-        'port': 8883                    # Port          -> defaults to 1883
-        'keepalive': 60                 # Lifetime      -> defaults to 60s
-        'credentials': {                # HTTP-Config   -> defaults to None
-            'user': 'foo'               #   User
-            'password': 'bar'           #   Password
-        }
+        'id': 'yourClientID',			# Client ID	-> defaults to generated UUID
+        'host': 'your-mqtt-host.com',   # URI           -> defaults to 127.0.0.1
+        'port': 8883,                  	# Port          -> defaults to 1883
+        'keepalive': 60,               	# Lifetime      -> defaults to 60s
+        'credentials': {               	# HTTP-Config   -> defaults to None
+            'username': 'foo',    		# User
+            'password': 'bar'          	# Password
+        },
         'tls_settings': {               # TLS-Config    -> defaults to None
-            'ca_certs': '/etc/ssl/...'  #   Cert-Dir
-            'tls_version': XXX          #   TLS-Version -> defaults TLSv1
+            'ca_certs': '/etc/ssl/...', # Cert-Dir
+            'tls_version': XXX          # TLS-Version -> defaults TLSv1
         }
     }
 
@@ -27,7 +27,7 @@ constructor. The config dictionary can contain the following options:
 class MQTTClient():
     config = {
         'host': 'yourhost.com',     		# replace yourhost.com with your host
-        'port': 1883,				# replace 1883 with MQTT port 
+        'port': 1883,						# replace 1883 with MQTT port 
         'keepalive': 60,
         'credentials': {
             'username': 'yourusername',		# replace yourusername with your username
