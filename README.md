@@ -6,9 +6,7 @@ This plugin allows you to send data to an MQTT message broker using a [CraftBeer
 
 ```
 cd craftbeerpi3/modules/plugins/
-
 git clone https://github.com/jpfranca1977/craftbeerpi-MQTTClient
-
 cd craftbeerpi-MQTTClient
 ```
 In case you miss the eclipse paho library. Install the dependencies using:
@@ -18,11 +16,9 @@ pip install paho-mqtt
 
 ## Configuration
 
-Configure host, port, username, passwrd in the ```MQTTClient.py´´´ file.
+Configure host, port, username, passwrd in the ```MQTTClient.py``` file.
 
 Configure your MQTT topics and data in the ```__init__.py``` file. 
-
-```
 
 ## Testing
 
