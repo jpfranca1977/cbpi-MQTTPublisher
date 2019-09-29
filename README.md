@@ -1,4 +1,4 @@
-# craftbeerpi-MQTTClient
+# cbpi-MQTTPublisher
 
 This plugin allows you to send data to an MQTT message broker using a [CraftBeerPi background task](https://github.com/Manuel83/craftbeerpi3/wiki/Custom-Background-Task).
 
